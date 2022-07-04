@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anniversary</title>
+  <link rel="stylesheet" href="./css/anniversary.css">
+</head>
+<body>
+  <div>
+    <button id="prevBtn" class="prevBtn" style="cursor: pointer">이전</button>
+  </div>
+  <!-- 기념일 계산기 -->
+  <div class="anniversary">
+    <div class="day1">
+      <h3>우리 만난 지</h3>
+      <p id="accent" class="accent"><span style="font-size:2em">일</span></p>
+    </div>
+    <div class="bar">기념일 계산</div>
+    <div class="day2">
+      <ul>
+        <li class="item-title">100일</li>
+        <li class="item-date" id="date100"></li>
+      </ul>
+      <ul>
+        <li class="item-title">200일</li>
+        <li class="item-date" id="date200"></li>
+      </ul>
+      <ul>
+        <li class="item-title">1년</li>
+        <li class="item-date" id="date365"></li>
+      </ul>
+      <ul>
+        <li class="item-title">500일</li>
+        <li class="item-date" id="date500"></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="./js/anniversary.js"></script>
+</body>
+</html>

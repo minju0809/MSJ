@@ -1,0 +1,186 @@
+:root {
+  --text-color: #f0f4f5;
+  --background-color: rgba(52, 11, 11, 0.86);
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body {
+  margin: 0;
+  background-color: var(--text-color);
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(52, 11, 11, 0.86);
+  color: var(--text-color);
+  font: 20px bold;
+}
+
+#headerTitle {
+  display: flex;
+  align-items: center;
+}
+
+#icon {
+  margin: 10px;
+  width: 40px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+#headerMenu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  justify-content: space-around;
+}
+
+#headerMenu li {
+  padding: 8px 12px;
+}
+
+#headerMenu li:hover {
+  background-color: rgba(76, 25, 25, 0.86);
+  transition: 0.5s;
+  border-radius: 5px;
+}
+
+.menus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#arrow {
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  display: none;
+  margin-right: 10px;
+}
+
+#headerLink {
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  border-radius: 40%;
+  /* overflow: hidden; */
+  display: flex;
+  align-items: center;
+  background-color: black;
+  justify-content: center;
+}
+
+#link {
+  border-radius: 40%;
+  width: 60px;
+  /* height: 40px; */
+}
+
+#toggleBtn {
+  display: none;
+  position: absolute;
+  top: 32px;
+  right: 24px;
+}
+
+#btnImg {
+  width: 25px;
+}
+
+/* 이미지 슬라이드 만들기 */
+.imgBody {
+  display: flex;
+}
+
+.body1 {
+  margin: 0px;
+  width: 50%;
+}
+
+.slidelist1 {
+  margin: 2px;
+}
+
+.autoSlide1 {
+  width: 100%;
+  border-radius: 20px;
+  outline-offset: -4px;
+  outline: 2px dashed #ccc;
+}
+
+.body2 {
+  margin: 0px;
+  width: 50%;
+  align-self: center;
+}
+
+.slidelist2 {
+  margin: 2px;
+
+}
+
+.autoSlide2 {
+  width: 100%;
+  border-radius: 100px;
+}
+
+
+
+@media screen and (max-width: 660px) {
+  #header {
+    padding: 8px 12px;
+    align-items: left;
+    flex-direction: column;
+  }
+
+  #headerMenu {
+    display: none;
+    width: 100%;
+    padding: 0px;
+    flex-direction: column;
+  }
+
+  #headerMenu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  #headerLink {
+    display: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 40%;
+    margin: 0 auto;
+    overflow: hidden;
+    justify-content: center;
+    background-color: black;
+  }
+
+  #link {
+    height: 40px;
+  }
+
+  #toggleBtn {
+    display: block;
+  }
+
+  #headerMenu.active,
+  #headerLink.active {
+    display: flex;
+  }
+}

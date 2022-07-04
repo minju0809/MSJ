@@ -1,0 +1,33 @@
+div {
+    color: blue;
+    font-size: 20px;
+}
+body {
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid blue;
+    display: flex;
+    margin: 0px;
+    height: 150px;
+}
+.box {
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.box1 {
+    border: 1px solid red;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+.box1-1 {
+    border: 1px solid green;
+    position: relative;
+}

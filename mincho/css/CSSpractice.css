@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(ellipse at bottom, #3f5e82 0%, #090b12 100%);
+  overflow: hidden;
+}
+
+.prev {
+  padding: 4px;
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  position: absolute;
+  top: 22px;
+  left: 12px;
+}
+
+.header {
+  color: #fff;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+hr {
+  border: 1px solid #444;
+}
+
+
+/* snow - 다른 코드와 함께 작동하지 않음 */
+.snow {
+  width: 10px;
+  height: 10px;
+  opacity: 0;
+  background: #4fc3dc;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #4fc3dc44;
+  animation: snow 10s linear infinite;
+}
+
+.snow:nth-of-type(2n) {
+  width: 6px;
+  height: 6px;
+  animation-duration: 7s;
+  animation-delay: 1s;
+}
+
+.snow:nth-of-type(2n+1) {
+  width: 8px;
+  height: 8px;
+  animation-duration: 8s;
+  animation-delay: 2s;
+}
+
+.snow:nth-of-type(9n) {
+  animation-duration: 9s;
+  animation-delay: 3s;
+}
+
+@keyframes snow {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0);
+  }
+
+  25% {
+    opacity: 1;
+    transform: translate(-15px, 25vh) scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(15px, 50vh) scale(1);
+  }
+
+  75% {
+    opacity: 1;
+    transform: translateY(0px, 75vh) scale(1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(100vh) scale(1);
+  }
+}
+
+
+/* practice1 */
+.practice1 {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.practice1 a {
+  position: relative;
+  background: #444;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  padding: 10px 30px;
+  transition: 0.5s;
+}
+
+.practice1 a:hover {
+  letter-spacing: 0.25em;
+  background: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 35px var(--clr);
+}
+
+.practice1 a::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: #27282c;
+}
+
+.practice1 a span {
+  position: relative;
+  z-index: 1;
+}
+
+.practice1 a i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.practice1 a i::before {
+  content: '';
+  position: absolute;
+  top: -3.5px;
+  left: 80%;
+  width: 10px;
+  height: 5px;
+  border: 2px solid var(--clr);
+  background: #27282c;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+
+.practice1 a:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+
+
+.practice1 a i::after {
+  content: '';
+  position: absolute;
+  bottom: -3.5px;
+  left: 20%;
+  width: 10px;
+  height: 5px;
+  border: 2px solid var(--clr);
+  background: #27282c;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+
+.practice1 a:hover i::after {
+  width: 20px;
+  left: 80%;
+}

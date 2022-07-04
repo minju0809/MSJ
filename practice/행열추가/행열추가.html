@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mincho</title>
+  <link rel="stylesheet" href="./행열추가.css">
+</head>
+
+<body>
+  <table id="fruits">
+    <colgroup span="4" class="columns"></colgroup>
+      <tr>
+        <th>Countries</th>
+        <th>Capitals</th>
+        <th>Population</th>
+        <th>Language</th>
+      </tr>
+      <tr>
+        <td><input type="text">USA</td>
+        <td><input type="text">Washington D.C.</td>
+        <td><input type="text">309 million</td>
+        <td><input type="text">English</td>
+      </tr>
+      <tr>
+        <td><input type="text">Sweden</td>
+        <td><input type="text">Stockholm</td>
+        <td><input type="text">9 million</td>
+        <td><input type="text">Swedish</td>
+      </tr>
+
+    <input type="button" value="행추가" onclick="addRow()" />
+    <input type="button" value="행삭제" onclick="deleteRow(-1)" />
+    <input type="button" value="열추가" onclick="addColumn()" /> 
+    <input type="button" value="열삭제" onclick="deleteColumn()" />
+  </table>
+
+  <script src="./행열추가.js"></script>
+</body>
+
+</html>

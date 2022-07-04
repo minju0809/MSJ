@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>noticePractice</title>
+  <link rel="stylesheet" href="./css/noticePractice.css">
+</head>
+
+<body>
+  <div id="header" class="header">
+    <h3>공지사항</h3>
+    <button id="addBtn" class="addBtn" style="cursor: pointer">추가</button>
+  </div>
+  <hr>
+  <form onsubmit="return false" id="notice" class="notice" action="#" accept-charset="utf-8">
+    <fieldset style="width:250">
+      <legend>공지사항</legend>
+      <textarea id="contents" class="contents" name="comment" style="width:100%" rows="5"
+        placeholder="공지하려는 내용을 적어주세요."></textarea><br><br>
+      <button id="registerBtn" class="registerBtn" onclick="newRegister();return false;" style="cursor: pointer">등록</button>
+    </fieldset>
+  </form>
+  <div id="addNotice" class="addNotice"></div>
+
+  <script src="./js/noticePractice.js"></script>
+</body>
+
+</html>

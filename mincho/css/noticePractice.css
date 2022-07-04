@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  margin: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+hr {
+  margin: 5px;
+  border: 3px solid lightgray;
+  /* clear:both;
+  visibility: hidden; */
+}
+
+.notice {
+  display: none;
+}
+
+.add {
+  position: relative;
+  cursor: pointer;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+/* input:focus {
+  outline: none;
+} */
+
+button:hover {
+  background-color:#ccc;
+}
+
+#addNotice > p {
+  font-size:20px;
+  margin-left: 5px;
+  /* text-indent:50px; */
+  line-height: 1.5;
+}
+
+.del {
+  font-size:20px;
+  text-align: center;
+  color:#ccc;
+  background:transparent;
+  float:right;
+  margin-right:10px;
+}
+.del:hover {
+  color:#222;
+  cursor: pointer;
+}
+.del:active {
+  outline:0;
+}
+
+.mod {
+  font-size:20px;
+  text-align: center;
+  color:#ccc;
+  background:transparent;
+  float:right;
+  margin-right:10px;
+}
+.mod:hover {
+  color:#222;
+  cursor: pointer;
+}
+.mod:active {
+  outline:0;
+}

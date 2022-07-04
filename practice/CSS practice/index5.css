@@ -1,0 +1,40 @@
+h1 {
+    text-align: center;
+}
+hr {
+    border: none;
+    border: 5px double gray;
+}
+.box1 {
+    border: 1px solid green;
+    display: flex;
+}
+.box1 div {
+    text-align: center;
+    background-color: yellow;
+    width: 25%;
+    margin: 5px;
+}
+.box3 {
+    border: 1px solid green;
+    display: flex;
+}
+.box3 div,
+.box3 img {
+    text-align: center;
+    width: 25%;
+    height: 150px;
+    margin: 5px;
+}
+.box4 {
+    position: relative;
+    height: 200px;
+}
+.box4-1 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: red;
+    width: 25%;
+    height: 100%;
+}

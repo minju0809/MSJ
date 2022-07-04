@@ -1,0 +1,23 @@
+#bigImg {
+  display: flex;
+  justify-content: center;
+}
+
+.big {
+  margin: 2px;
+  width: 300px;
+  outline-offset: -5px;
+  outline: 2px dashed #ccc;
+}
+
+#smallImg {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.small {
+  cursor: pointer;
+  margin: 2px;
+  width: 100px;
+}

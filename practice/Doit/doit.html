@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>코린이연습장</title>
+  <link rel="stylesheet" href="doit.css">
+</head>
+
+<body>
+  <div id="title">
+    <h1>어서오세요 코린이의 연습장입니다.</h1>
+  </div>
+
+  <!-- <button onclick="calc()">나이 계산하기</button> -->
+  <!-- <div id="ageResult"></div> -->
+  <!-- <div id="ifNumber"></div> -->
+  <!-- <div id="calcResult"></div> -->
+  <!-- <button id="add" onclick="addNumber()">덧셈 계산하기</button> -->
+
+  <div id="ring">
+    <img src="/images/images/MJS/0 ring.jpg" alt="" id="cover">
+    <button class="over" id="open" onclick="showDetail()">상세보기열기</button>
+    <div id="detail">
+      <h4>Couple Ring</h4>
+      <p>2022.05.01</p>
+      <button class="over" id="close" onclick="hideDetail()">상세보기닫기</button>
+    </div>
+  </div>
+
+  <!-- 기념일 계산기 -->
+  <div class="anniversary">
+    <div class="day1">
+      <h3>우리 만난 지</h3>
+      <p id="accent" class="accent"><span style="font-size:2em">일</span></p>
+    </div>
+    <div class="bar">기념일 계산</div>
+    <div class="day2">
+      <ul>
+        <li class="item-title">100일</li>
+        <li class="item-date" id="date100"></li>
+      </ul>
+      <ul>
+        <li class="item-title">200일</li>
+        <li class="item-date" id="date200"></li>
+      </ul>
+      <ul>
+        <li class="item-title">1년</li>
+        <li class="item-date" id="date365"></li>
+      </ul>
+      <ul>
+        <li class="item-title">500일</li>
+        <li class="item-date" id="date500"></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 여행 준비물 점검 프로그램 > to do list로 변경 -->
+  <div id="wrapper">
+    <h2>To do list</h2>
+    <form onsubmit="return false" class="addList">
+      <input type="text" id="toDo" autofocus="true">
+      <button type="button" class="addBtn" id="add">추가</button>
+    </form>
+    <div id="toDoList" class="font"></div>
+  </div>
+
+  <!-- 이벤트 연습 -->
+  <div id="practice">
+    <button id="openBtn" onclick="showPicture()">사진보기</button>
+    <div id="picture">
+      <img id=practiceImg src="/images/images/MJS/7 firstTrip_Jeju.jpg" alt="">
+      <button id="closeBtn" onclick="hidePicture()">사진닫기</button>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- 이미지 변경하기 -->
+  <div id="image">
+    <div id="bigImg">
+      <img class="big" src="/images/images/MJS/14 couplering.jpg" alt="">
+    </div>
+    <div id="smallImg">
+      <img class="small" src="/images/images/MJS/10 완선Wedding1.jpg" alt="">
+      <img class="small" src="/images/images/MJS/11 완선Wedding2.jpg" alt="">
+      <img class="small" src="/images/images/MJS/12 완선Wedding3.jpg" alt="">
+    </div>
+  </div>
+
+  <div id="imege2">
+    <div id="img">
+      <img id="boy" src="/images/images/MJS/0 header1.jpg" alt="">
+    </div>
+  </div>
+
+  <!-- mouseover 시 도형 모양 바꾸기 -->
+  <div id="container">
+    <h3>도형 위로 마우스 포인터를 올려놓으세요.</h3>
+    <div id="rect"></div>
+  </div>
+
+  <!-- 상세보기, 닫기 -->
+  <!-- <div id="button">
+    <a href="#" id="view">상세보기</a>
+    <div id="detail">
+      <h2>상세정보</h2>
+    </div>
+  </div> -->
+
+  <script>
+    // 나이 계산하기
+    // function calc() {
+    //   let currentYear = new Date().getFullYear();
+    //   let birthYear = prompt("태어난 년도를 입력하세요.");
+    //   let age;
+    //   age = currentYear - birthYear + 1;
+    //   document.querySelector("#ageResult").innerHTML = "나이: " + age + "세";
+    // }
+
+    //  if 문
+    // let number = prompt("숫자를 입력하세요.");
+    // if(number < 0) {
+    //   alert("0 이상의 수를 입력하세요.");
+    // } else {
+    //   document.querySelector("#ifNumber").innerHTML = "입력한 숫자: " + number;
+    // }
+
+    // 조건 연산자
+    // let score = prompt("점수");
+    // (score >= 70) ? alert("합격") : alert("불합격");
+
+    // 3의 배수 찾기
+    // let number = prompt("숫자");
+    // let calc = document.querySelector("#calcResult");
+    // if(number != null) {
+    //   if(number %3 === 0) {
+    //     calc.innerHTML =
+    //     "입력한 숫자 " + number + "은(는) 3의 배수가 맞습니다.";
+    //   } else {
+    //     calc.innerHTML =
+    //     "입력한 숫자 " + number + "은(는) 3의 배수가 아닙니다.";
+    //   }
+    // }
+
+    // switch문
+    // let session = prompt("관심 세션을 선택해주세요. 1-HTML, 2-CSS, 3-JavaScript", "3");
+    // switch (session) {
+    //   case "1": document.write("<p>HTML</p>");
+    //     break;
+    //   case "2": document.write("<p>CSS</p>");
+    //     break;
+    //   case "3": document.write("<p>JavaScript</p>");
+    //     break;2
+    //   default: alert("잘못 입력했습니다.");
+    // }
+
+    // for문 - 더하기
+    // let sum = 0;
+    // for(i=1; i<6; i++) {
+    //   sum += i;
+    // }
+    // document.write("1부터 5까지 더하면 " + sum);
+
+    // for문 - 별 찍기
+    // for(j=0; j<5; j++) {
+    //   for(i=0; i<30; i++) {
+    //     document.write("*");
+    //   }
+    //   document.write("<br><br>");
+    // }
+
+    // 구구단 만들기
+    // for(j=2; j<=9; j++) {
+    //   document.write("<div>");
+    //   document.write("<h3>" + j + " 단</h3>");
+    //   for(i=1; i<10; i++) {
+    //     document.write(j + " X " + i + " = " + j*i + "<p>");
+    //     }
+    //     document.write("</div>");
+    // }
+
+    // while문으로 팩토리얼 계산기 만들기
+    // let n = prompt("숫자를 입력하세요.");
+    // let nFact = 1;
+    // let i = 2;
+
+    // while(i<=n) {
+    //   nFact *= i;
+    //   i++;
+    // }
+    // document.write(n + "!= " + nFact);
+
+    // for문으로 팩토리얼 계산기 만들기]
+    // let n = prompt("숫자를 입력하세요.");
+    // let nFact = 1;
+    // for(i=2; i<=n; i++) {
+    //   nFact *= i;
+    // }
+    // document.write(n + "!= " + nFact);
+
+    // if, for, continue문으로 짝수 더하기 프로그램 만들기
+    // let n = prompt("숫자를 입력해주세요.");
+    // let sum = 0;
+    // for(i=1; i<=n; i++) {
+    // 내 답
+    //   if(i %2 == 0) {
+    //     sum += i;
+    //   } else {
+    //     continue;
+    //   }
+    // 답안지
+    //   if(i %2 ==1) {
+    //     continue;
+    //   }
+    //   sum += i;
+
+    //   document.write(i + "-----" + sum + "<br>");
+    // }
+
+    // 짝수, 홀수 구분하기
+    // let n = prompt("숫자를 입력하세요.");
+    // 내 답
+    // for(i=1; i<=n; i++) {
+    //   if(n %2 == 1) {
+    //     document.write(n + "은(는) 홀수입니다.");
+    //     break;
+    //   } else {
+    //     document.write(n + "은(는) 짝수입니다.");
+    //     break;
+    //   }
+    // }
+    // 답안지
+    // if(n != null) {
+    // 	if(n % 2 ==0)
+    // 		document.write(n +"는 짝수입니다.");
+    // 	else
+    // 		document.write(n +"는 홀수입니다.");
+    // }
+
+    // 3의 배수 표시, 갯수 표시
+    // 내 답
+    // let n = 100;
+    // for(i=1; i<=100; i++) {
+    //   if(i %3 === 0) {
+    //     document.write(i + " ");
+    //   } else {
+    //     continue;
+    //   }
+    // }
+    // document.write(n.length);
+    // 답안지
+    // let count = 0;
+    // for(i=1; i<=100; i++) {
+    //   if(i %3 == 0) {
+    //     count++;
+    //     document.write(i + ", ");
+    //   }
+    // }
+    // document.write("<p>3의 배수의 갯수 : ", count + "</p>");
+
+    // 버튼 이용 두 수를 더하는 함수 만들기 (덧셈 계산하기)
+    // function addNumber() {
+    //   let num1 = parseInt(prompt("첫 번째 숫자"));
+    //   let num2 = parseInt(prompt("두 번째 숫자"));
+    //   let sum = num1 + num2;
+    //   document.write(sum);
+    // }
+
+    // 상세보기열기, 닫기 >> 새로고침 시 상세보기열기 버튼 위에 있는 것 자리 변경?
+    function showDetail() {
+      document.querySelector("#detail").style.display = 'block';
+      document.querySelector("#open").style.display = 'none';
+    }
+
+    function hideDetail() {
+      document.querySelector("#detail").style.display = 'none';
+      document.querySelector("#open").style.display = 'block';
+    }
+
+    let coverImage = document.querySelector("#cover");
+    coverImage.onclick = function () {
+      alert("커플링입니다.");
+    }
+    coverImage.onmouseover = function () {
+      coverImage.style.border = "5px black solid";
+    }
+    coverImage.onmouseout = function () {
+      coverImage.style.border = "5px solid transparent";
+    }
+
+    // 매개변수 받아 함수 실행
+    // function sumMulti(a, b) {
+    //   if(a == b) {
+    //     return a * b;
+    //   } else {
+    //     return a + b;
+    //   };
+    // }
+    // console.log(sumMulti(5, 10));
+    // console.log(sumMulti(10, 10));
+
+    // 두 숫자 비교하여 알침 창에 표시
+    // 내 답
+    //   function compare() {
+    //     let num1 = prompt("비교할 첫 번째 숫자는: ");
+    //     let num2 = prompt("비교할 두 번째 숫자는: ");  
+    //     if(num1 > num2) {
+    //     alert(num1 + "이(가) " + num2 + "보다 큽니다.");
+    //   } else if(num1 < num2) {
+    //     alert(num2 + "이(가) " + num1 + "보다 큽니다.");
+    //   } else {
+    //     alert(num1 + "와(과) " + num2 + "은(는) 같습니다.");
+    //   }
+    // }
+    // compare();
+
+    // 답안지
+    // var num1 = parseInt(prompt("비교할 첫 번째 숫자: "));   // parseInt 함수는 괄호 안의 값을 정수형 숫자로 변환합니다.
+    // var num2 = parseInt(prompt("비교할 두 번째 숫자 : "));
+
+    // compareTwo(num1, num2);
+
+    // function compareTwo(x, y) {
+    // 	if (x == y) alert(x + "와(과) " + y + "는 같습니다.");
+    // 	else if (x > y) alert( x + "(이)가 " + y + "보다 큽니다.");
+    // 	else alert(y + "(이)가 " + x + "보다 큽니다.");
+    // }
+
+    //  객체의 프로토타입과 인스턴스
+    // function gymInfo(name, address, time, price) {
+    //   this.name = name;
+    //   this.address = address;
+    //   this.time = time;
+    //   this.price = price;
+    // }
+
+    // let 구로누리 = new gymInfo('구로누리체육관', '서울시 신도림', '7~10시', '3000원');
+    // let 영등포 = new gymInfo('영등포다목적체육관', '서울시 영등포', '7~10시', '3000원');
+    // console.log(구로누리);
+    // document.write(영등포.name);
+
+    // let gymList = [구로누리, 영등포];
+
+    // document.write("<h1>체육관 살펴보기</h1>");
+    // for(i=0; i<gymList.length; i++) {
+    //   document.write("<p>" + gymList[i].name + "</p>");
+    // }
+
+    //  기념일 계산기 만들기
+    let now = new Date();
+    let firstDay = new Date("2022-01-31");
+    let passedTime = now.getTime() - firstDay.getTime();
+    let passedDay = Math.round(passedTime / (1000 * 60 * 60 * 24));
+    document.querySelector("#accent").innerText = passedDay + "일";
+
+    calc(100);
+    calc(200);
+    calc(365);
+    calc(500);
+
+    function calc(days) {
+      let toFirst = firstDay.getTime();
+      let future = toFirst + days * (1000 * 60 * 60 * 24);
+      let someday = new Date(future);
+      let year = someday.getFullYear();
+      let month = someday.getMonth() + 1;
+      let date = someday.getDate();
+      document.querySelector("#date" + days).innerText = year + "년 " + month + "월 " + date + "일";
+    }
+
+
+    // function member(name, id, age, address) {
+    //   this.name = name;
+    //   this.id = id;
+    //   this.age = age;
+    //   this.address = address;
+    // }
+    // let member1 = new member("강민주", "minju", "32", "인천시");
+    // let member2 = new member("홍승주", "seungju", "26", "서울시");
+
+
+    // document.write("<h2>" + member1.name + "</h2>");
+    // document.write("<ul><li>id : " + member1.id + "</li>");
+    // document.write("<li>나이 : " + member1.age + "</li>");
+    // document.write("<li>주소 : " + member1.address + "</li></ul>");	
+
+
+    // let memberList = [member1, member2];
+
+    // for(i=0; i<memberList.length; i++) {
+    //   document.write("<h2>" + memberList[i].name + "</h2>");
+    //   document.write("<ul><li>id : " + memberList[i].id + "</li>");
+    //   document.write("<li>나이 : " + memberList[i].age + "</li>");
+    //   document.write("<li>주소 : " + memberList[i].address + "</li></ul>");	
+    // }
+
+    // 여행 준비물 점검 프로그램 > to do list 로 변경
+//////////////////////////////////////////////////////////////
+    let toDoList = [];
+    let addBtn = document.querySelector("#add");
+    addBtn.addEventListener('click', addList);
+    // addBtn.onclick = addList; 라고 해도 됨
+
+    function addList() {
+      let toDo = document.querySelector("#toDo").value;
+      // undefined > 메모리도 할당안됨
+      // null > 메모리는 할당되었으나 값이 없음
+      // "" > 메모리도 할당, 값은 공백이라는 문자 ( 값도 있다 )
+      // if (toDo != "") {
+      if (toDo.length > 0) {
+        toDoList.push(toDo);
+        document.querySelector("#toDo").value = "";
+        document.querySelector("#toDo").focus();
+      }
+      showList();
+    }
+
+    // enter 입력 시 리스트 추가 동작 실행
+    let inputData = document.getElementById("toDo");
+    inputData.addEventListener("keypress", function (event) {
+      if (inputData.value.length > 0 && event.keyCode === 13) {
+        toDoList.push(inputData.value);
+        inputData.value = "";
+        showList();
+      }
+    })
+
+    function checkList(index) {
+      const items = document.getElementsByClassName("item");
+      // const items = document.querySelector(".item")
+      console.log("items", items);
+      // items[index].style.textDecoration = "line-through";
+
+      if (items[index].classList.contains("deleted")) {
+        // has, includes, contains
+        // deleted 클래스가 있으면
+        items[index].classList.remove("deleted");
+      } else {
+        // deleted 클래스가 없으면
+        items[index].classList.add("deleted");
+      }
+    }
+
+    function mouseover(index) {
+      console.log('in', index)
+      const list = document.querySelector(`.list_${index}`)
+      console.log("list", list)
+      list.style.border = "2px solid red";
+    }
+
+    function mouseout(index) {
+      console.log('out', index)
+      const list = document.querySelector(`.list_${index}`)
+      console.log("list", list)
+      list.style.border = "2px solid transparent";
+    }
+
+    function showList() {
+      // let container = document.createElement("div");
+      // document.body.appendChild(container)
+
+      let list = "<ul>";
+      for (let i = 0; i < toDoList.length; i++) {
+        list += "<li class='list_con list_" + i + "' onmouseout='mouseout(" + i + ")' onmouseover='mouseover(" + i + ")'><span class='item' onclick='checkList(" + i + ")'>" + toDoList[i] + "</span><span class='close' id=" + i + ">X</span></li>";
+
+        // list += `<li class="list_con"><span class="item" onclick="chechList("${i}")>${toDoList}</span><span class='close' id="${i}">X</span></li>`  
+      }
+      list += "</ul>";
+
+      
+
+      document.querySelector('#toDoList').innerHTML = list;
+
+      let finish = document.querySelectorAll(".close");
+      for (i = 0; i < finish.length; i++) {
+        finish[i].addEventListener("click", finishList);
+        // = finish[i].onclick = finishList;
+      }
+    }
+
+    // 마우스 위치에 따라 표시
+    let item = document.getElementsByClassName("close");
+    console.log("item", item)
+    item.onmouseover = function () {
+      item.style.border = "5px solid black";
+    }
+    item.onmouseout = function () {
+      item.style.border = "";
+    }
+
+
+    function finishList() {
+      let id = this.getAttribute("id");
+      toDoList.splice(id, 1);
+      showList();
+    }
+
+
+    // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    // @@@ 1. classList @@@@@@@@@@@@@@@@@@@@
+    // @@@ 2. template literal @@@@@@@@@@@@@
+    // @@@ 3. event @@@@@@@@@@@@@@@@@@@@@@@@
+    // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+    // 07단원 Quiz-1
+    // let evenNumber = [2, 4, 6, 8, 10];
+    // // showArray(evenNumber);
+
+    // let sum = 0;
+    // for(i=0; i<evenNumber.length; i++) {
+    //   sum += evenNumber[i];
+    // }
+    // evenNumber.push(sum);
+    // document.write(evenNumber);
+    // showArray(evenNumber);
+
+    // function showArray(arr) {
+    //   let str = "<table><tr>";
+    //   for(i=0; i<arr.length; i++) {
+    //     str += "<td>" + arr[i] + "</td>";
+    //   }
+    //   str += "</tr></table>";
+    //   document.write(str);
+    // }
+
+    // 07단원 Quiz-2
+    // 내 답 (사이트 참조)
+    // let name1 = "강민주";
+    // let name2 = "홍승주";
+    // let name3 = "민초";
+    // let names = [name1, name2, name3];
+    // function randomValue(array) {
+    //   let random = Math.floor(Math.random() * array.length);
+    //   return array[random];
+    // }
+
+    // let pick = randomValue(names)
+    // console.log(pick);
+    // document.write(pick);
+
+    // 답안지
+    //     var quotes = [];
+    // quotes[0] = "당신은 지금도 최고고, 이전에도 최고였으며 앞으로도 최고일 것입니다.";
+    // quotes[1] = "성공하는 사람은 실패하는데 익숙한 사람이다.";
+    // quotes[2] = "후회를 최대한 이용하라. 깊이 후회한다는 것은 새로운 삶은 산다는 것이다.";
+    // quotes[3] = "가짜 친구는 소문을 믿고 진짜 친구는 나를 믿는다.";
+    // quotes[4] = "성공이라는 못을 박으려면 끈질김이라는 망치가 필요하다.";
+    // quotes[5] = "인생이란 결코 공평하지 않다. 이 사실에 익숙해져라.";
+    // quotes[6] = "'언젠가'라는 날은 영원히 오지 않는다.";
+    // quotes[7] = "문제점을 찾지 말고 해결책을 찾으라.";
+    // quotes[8] = "착한 일은 작다 해서 아니하지 말고, 악한 일은 작다 해도 하지 말라.";
+    // quotes[9] = "자존심은 어리석은 자의 소유물이다";
+
+    // var index = Math.floor(Math.random() * 10);
+    // document.write("<p>&quot;" + quotes[index] + "&quot;</p>")
+
+
+    function showPicture() {
+      document.querySelector("#picture").style.display = "block";
+      document.querySelector("#openBtn").style.display = "none";
+    }
+
+    function hidePicture() {
+      document.querySelector("#picture").style.display = "none";
+      document.querySelector("#openBtn").style.display = "block";
+    }
+
+    let coverImg = document.querySelector("#practiceImg");
+    coverImg.onmouseover = function () {
+      coverImg.style.border = "2px dashed black";
+      // 적용이 안됨
+    }
+    coverImg.onmouseout = function () {
+      coverImg.style.border = "2px solid transparent";
+    }
+
+    // 이미지 변경하기
+    let bigPic = document.querySelector(".big");
+    let smallPics = document.querySelectorAll(".small");
+
+    for (i = 0; i < smallPics.length; i++) {
+      smallPics[i].onclick = showBig;
+    }
+
+    function showBig() {
+      let newPic = this.src;
+      bigPic.setAttribute("src", newPic);
+    }
+
+    // 이미지 변경하기 2
+    let pic = document.querySelector("#boy");
+    pic.addEventListener("mouseover", changePic, false);
+    pic.addEventListener("mouseout", originPic, false);
+
+    function changePic() {
+      pic.src = "/images/images/MJS/0 header2.jpg";
+    }
+
+    function originPic() {
+      pic.src = "/images/images/MJS/0 header1.jpg";
+    }
+
+    // mouseover 시 도형 모양 바꾸기
+    let myRect = document.querySelector("#rect");
+    myRect.addEventListener("mouseover", function () {
+      myRect.style.backgroundColor = "lightgreen";
+      myRect.style.borderRadius = "50%";
+    });
+    myRect.addEventListener("mouseout", function () {
+      myRect.style.backgroundColor = "";
+      myRect.style.borderRadius = "";
+    });
+
+    // 상세보기, 닫기   
+    // <div id="button">
+    //   <a href="#" id="view">상세보기</a>
+    //   <div id="detail">상세정보</div>
+    // </div>
+    // let isOpen = false;
+    // let view = document.querySelector("#view");
+    // view.addEventListener("click", function () {
+    //   document.querySelector("#detail").style.display = "block";
+    // });
+
+
+  </script>
+
+</body>
+
+</html>

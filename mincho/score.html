@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>score</title>
+  <link rel="stylesheet" href="./css/score.css">
+</head>
+
+<body>
+  <div id="scoreBoard" class="scoreBoard">
+    <div id="header" class="header">
+      <button id="prevBtn" class="prevBtn" style="cursor: pointer">이전</button>
+      <div id="headerName" class="headerName">SCORE</div>
+      <button id="resetBtn" class="resetBtn" onclick="location.reload()" style="cursor: pointer">초기화</button>
+    </div>
+    <div id="score" class="score">
+      <div id="leftScore" class="leftScore" style="cursor: pointer" onclick="handleScore('left')">0</div>
+      <div id="rightScore" class="rightScore" style="cursor: pointer" onclick="handleScore('right')">0</div>
+    </div>
+  </div>
+
+  <script src="./js/score.js"></script>
+</body>
+
+</html>

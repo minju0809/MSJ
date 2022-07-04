@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mincho</title>
+  <link rel="stylesheet" href="./css/mincho.css">
+  <script src="https://kit.fontawesome.com/9b284208b6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="header" class="header">
+      <img id="headerLogo1" class="headerLogo" src="../images/images/MJS/logo1.jpg" alt="">
+      <img id="headerLogo2" class="headerLogo" src="../images/images/MJS/logo2.jpg" alt="">
+      <img id="headerLogo3" class="headerLogo" src="../images/images/MJS/logo3.jpg" alt="">
+      <div id="headerTitle" class="headerTitle">MinCho</div>
+      <input class="modeBtn" type="button" value="day" onclick="day_night_handler(this)">
+      <ul class="logeMenu">
+        <li><a class="menus" onclick="location.href='../MSJ/msj.html'" href="#">
+            MSJ Home</a></li>
+        <li><a class="menus" onclick="location.href='./score.html'" href="#">
+            Score</a></li>
+        <li><a class="menus" onclick="location.href='./friend.html'" href="#">
+            Friend</a></li>
+        <li><a class="menus" onclick="location.href='../practice/baseballgame/baseballgame.html'" href="#">
+            Geme</a></li>
+        <li><a style="cursor:pointer" id="headerMyPage" class="menus" onclick="location.href='./infoform.html'">
+            Mypage</a></li>
+      </ul>
+      <a href="#" class="toggleBtn">
+        <i class="fa-solid fa-bars"></i>
+      </a>
+    </div>
+    <div class="timer">
+      <div id="time">
+        <div class="circle" style="--clr:#00e5ff">
+          <div class="dots hr_dot"></div>
+          <svg>
+            <circle cx="35" cy="35" r="35"></circle>
+            <circle cx="35" cy="35" r="35" id="hh"></circle>
+          </svg>
+          <div id="hours" class="timerFont">00</div>
+        </div>
+        <div class="circle" style="--clr:#64ffda">
+          <div class="dots min_dot"></div>
+          <svg>
+            <circle cx="35" cy="35" r="35"></circle>
+            <circle cx="35" cy="35" r="35" id="mm"></circle>
+          </svg>
+          <div id="minutes" class="timerFont">00</div>
+        </div>
+        <div class="circle" style="--clr:#00e676">
+          <div class="dots sec_dot"></div>
+          <svg>
+            <circle cx="35" cy="35" r="35"></circle>
+            <circle cx="35" cy="35" r="35" id="ss"></circle>
+          </svg>
+          <div id="seconds" class="timerFont">00</div>
+        </div>
+        <div class="ap">
+          <div id="ampm" class="timerFont">AM</div>
+        </div>
+      </div>
+    </div>
+    <div id="body" class="body">
+      <div class="bodyBtn_1">
+        <button style="cursor:pointer" id="bodyBtn1" class="bodyBtn">체육관 찾기</button>
+        <button style="cursor:pointer" id="bodyBtn2" class="bodyBtn">CSS 연습</button>
+      </div>
+      <div class="bodyBtn_2">
+        <button style="cursor:pointer" id="bodyBtn3" class="bodyBtn">번개</button>
+        <button style="cursor:pointer" id="bodyBtn4" class="bodyBtn">공지사항</button>
+      </div>
+    </div>
+  </div>
+  <script src="./js/mincho.js"></script>
+</body>
+
+</html>

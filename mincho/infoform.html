@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form</title>
+  <link rel="stylesheet" href="./css/infoform.css">
+</head>
+
+<body>
+  <button id="prevBtn" class="prevBtn" style="cursor: pointer">이전</button>
+  <header class="header">
+    <h2>마이페이지</h2>
+  </header>
+  <form action="#" accept-charset="utf-8" name="totalinfo" method="get">
+    <fieldset style="width:150">
+      <legend>개인 정보 입력</legend>
+      이름: <input type="text" name="name" /><br><br>
+      나이: <input type="radio" name="security_number" />20대 미만
+            <input type="radio" name="security_number" />20대
+            <input type="radio" name="security_number" />30대
+            <input type="radio" name="security_number" />40대
+            <input type="radio" name="security_number" />50대
+            <input type="radio" name="security_number" />60대 이상<br><br>
+      성별: <input type="radio" name="gender" />남
+            <input type="radio" name="gender" />여<br><br>
+      지역 선택<br>
+      <select name="city1">
+        <optgroup label="서울">
+          <option value="songpa-gu">송파구</option>
+          <option value="gangnam-gu">강남구</option>
+        </optgroup>
+        <optgroup label="경기도">
+          <option value="seongnam-si">성남시</option>
+          <option value="suwon-si">수원시</option>
+        </optgroup>
+      </select><br><br>
+      급수: <input type="text" name="class" /><br><br>
+    </fieldset>
+    <br>
+    <fieldset style="width:150; height: 150">
+      <legend>기타 정보</legend>
+      주 이동 방법: <input type="checkbox" name="checkbox1-1" />차량
+                  <input type="checkbox" name="checkbox1-2" />도보<br><br>
+      원하는 분야: <input type="checkbox" name="checkbox2-1" />체육관 정보
+      <input type="checkbox" name="checkbox2-2" />대관 예약
+      <input type="checkbox" name="checkbox2-3" />번개, 친구찾기<br><br>
+    </fieldset>
+    <br>
+    <fieldset style = "width:250">
+      <legend>하고 싶은 말</legend>
+      <textarea name = "comment" cols = "50" rows = "5" placeholder="원하시는 것이 있으면 적어주세요."></textarea><br><br>
+      <input type="submit" value="submit" />
+    </fieldset>
+  </form>
+
+  <script src="./js/infoform.js"></script>
+</body>
+
+</html>

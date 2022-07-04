@@ -1,0 +1,33 @@
+input {
+  width: 50px;
+  height: 50px;
+  font-size: 40px;
+  text-align: center;
+  margin: 5px 2px ;
+  border-radius: 5px;
+}
+
+
+#keyboard-cont {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#keyboard-cont div {
+  display: flex;
+}
+
+.second-row {
+  margin: 0.5rem 0;
+}
+
+.keyboard-button {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem;
+  margin: 0 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+}

@@ -1,0 +1,36 @@
+h1 {
+    border: 1px solid aqua;
+    background-color: #5cffd1;
+    opacity: 0.5;
+    width: 300px;
+    text-align: center;
+    line-height: 150px;
+    margin: auto;
+    border-radius: 50% 20% / 10% 40%
+}
+body {
+    position: relative;
+}
+.box {
+    border: 1px solid red;
+    height: 400px;
+    width: 500px;
+}
+.box1 {
+    border: 1px solid aqua;
+    height:25px;
+}
+.box2 {
+    border: 1px solid aqua;
+    margin-top: 4px;
+    height: calc(100% - 29px);
+}
+.box3 {
+    border: 1px solid aqua;
+    height: 400px;
+    width: 220px;
+    position: absolute;
+    top: 170px;
+    right: 0px;
+
+}

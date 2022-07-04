@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.gym p {
+  margin: 20px;
+}
+
+.prevBtn {
+  position: absolute;
+  top: 22px;
+  left: 12px;
+}
+
+.header {
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+hr {
+  margin: 5px;
+  border: 3px solid lightgray;
+}
+
+.bigImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  margin: 8px;
+  width: 36px;
+  height: 36px;
+}
+
+.slides {
+  border: thick double #32a1ce;
+  border-radius: 10px;
+  width: 60vw;
+}
+
+.gymSmallImg {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.smallImges {
+  outline-offset: -4px;
+  outline: 2px dashed #ccc;
+  margin: 8px;
+  width: 20%;
+  height: 5em;
+  height: 5rem;
+  border-radius: 5px;
+}
+
+.numberBtn {
+  display: flex;
+  justify-content: space-around;
+}

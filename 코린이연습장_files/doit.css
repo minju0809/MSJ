@@ -1,0 +1,276 @@
+#title {
+  border-bottom: 2px solid #666;
+  /* height: 80px; */
+  display: flex;
+  text-align: center;
+  height: 100px;
+}
+
+#title>h1 {
+  text-shadow: 5px 5px lightgreen;
+}
+
+
+/* 구구단용  */
+
+/* div {
+  display:inline-block;
+  padding:0 20px 30px 20px;
+  margin:15px;
+  border:1px solid #ccc;
+  line-height:2;
+}
+div h3 {
+  text-align:center;
+  font-weight:bold;
+} */
+
+/* 짝수 더하기용 */
+
+/* body {
+	padding-top:20px;
+	font-size:1.2em;
+	text-align:center;
+} */
+
+/* 상세보기용 */
+
+
+#ring img {
+  margin-left: 40px;
+  width: 30%;
+  transform: rotate(270deg);
+  border: 5px solid transparent;
+  /* border 줄 때 움직이지 않게 만드는 방법 */
+}
+
+#detail {
+  display: none;
+}
+
+.over {
+  display: block;
+}
+
+/* 객체의 프로토타입과 인스턴스용 */
+
+/* p { 
+  width:400px; 
+  padding:10px; 
+  border:1px solid #ccc;
+} */
+
+/* 기념일 계산기용 */
+
+body {
+  position: relative;
+}
+
+.anniversary {
+  width: 320px;
+  margin: auto 10px;
+  background: rgb(212, 254, 255);
+  position: absolute;
+  top: 120px;
+  right: 50px;
+  border: 2px solid black;
+  border-radius:2%;
+  box-shadow:2px 2px 5px #333;
+  text-align: center;
+}
+
+.day1 h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size:1.2em;
+  color:#666;
+}
+.accent{
+  /* margin-left:10px; */
+	/* margin-right:10px; */
+	margin-top:1px;
+  margin-bottom: 1px;
+	font-weight:bold;
+  font-size:2.7em;
+  color:#222;
+}
+
+.bar {
+  width:100%;
+  height:40px;	
+  background:#72edf8;
+  color:#fff;
+  font-size:1.2em;
+  line-height:40px;
+}
+
+.day2 {
+  width:400px;
+  margin:5px auto 5px auto;
+}
+.day2 ul {
+  list-style: none;
+  border-bottom:1px dashed #ccc;
+  height:50px;
+  margin: 1px;
+}
+.day2 ul:last-child {
+	border-bottom:none;
+}
+.item-title {
+  float:left;
+  width:100px;        
+  font-weight:bold;
+  font-size:1.3em;
+  line-height:50px;
+}
+.item-date {
+  float:left;
+  font-size:1.1em;
+  color:#222;
+  text-align:right;
+  line-height:50px;
+}
+
+/* to do list 용 */
+
+#wrapper {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: rgb(211, 240, 152);
+  width: 40%;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 30px;
+}
+
+.addBtn {
+  background-color: rgb(169, 225, 58);
+  border-radius: 5px;
+  margin-left: 10px;
+  height: 30px;
+  cursor:pointer;
+}
+
+.list_con {
+  position: relative;
+  border: 2px solid transparent;
+  transition: 0.5s;
+}
+/* 
+.list_con:hover {
+  
+  transition: 0.1s;
+  border: 2px solid red;
+} */
+
+.close {
+  position: absolute;
+  right: 20px;
+  border: 2px solid black;
+  background-color: rgb(169, 225, 58);
+  border-radius: 50%;
+  width: 20px;
+  cursor:pointer;
+}
+
+.deleted {
+  text-decoration: line-through !important;
+}
+
+.item {
+  text-decoration: none;
+  cursor:pointer;
+}
+
+/* 이벤트 연습용 */
+
+#practice {
+  margin: 10px;
+}
+
+#picture {
+  display: none;
+}
+
+#practiceImg {
+  width: 200px;
+  position: relative;
+  border: 2px dashed transparent;
+}
+
+#openBtn {
+  cursor:pointer;
+}
+
+#closeBtn {
+  margin-left: 10px;
+  position: absolute;
+  left: 0;
+  cursor:pointer;
+} 
+
+/* 이미지 변경하기용 */
+/* 
+#image {
+  display: flex;
+} */
+
+#bigImg {
+  text-align: center;
+}
+
+#bigImg img {
+  width: 400px;
+  outline:2px dashed #ccc;			
+  outline-offset: -10px;
+  cursor:pointer;
+}
+
+#smallImg {
+  text-align: center;
+}
+
+#smallImg img {
+  width: 200px;
+  cursor:pointer;
+}
+
+#imege2 img {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  border: 3px solid #72edf8;
+  border-radius: 30px;
+  top: 0px;
+  right: 40px;
+  height: 90px;
+}
+
+/* mouseover 시 도형 모양 바꾸기용 */
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#rect {
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  transition: 0.5s;
+  cursor:pointer;
+}
+
+/* 상세보기, 닫기 */
+#detail {
+  display: "";
+}

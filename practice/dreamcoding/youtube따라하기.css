@@ -1,0 +1,64 @@
+:root {
+  background-color: #3f5e85;
+  /* padding: 5px; */
+}
+
+body {
+  margin: 0;
+}
+
+hr {
+  margin: 0;
+}
+
+.header {
+  background-color: black;
+  color:white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+
+.header button {
+  background: rgb(16, 253, 253);
+  color: rgb(65, 63, 57);
+  border-radius: 8px;
+}
+
+.info {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+}
+
+.info div {
+  padding: 5px;
+}
+
+.sub {
+  position: absolute;
+  right: 20px;
+}
+
+.another {
+  padding-left: 0;
+}
+
+.another li {
+  padding: 2px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.another li img {
+  width: 150px;
+  padding: 2px;
+}

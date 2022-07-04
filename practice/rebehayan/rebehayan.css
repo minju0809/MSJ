@@ -1,0 +1,82 @@
+html {
+  font-size: 20px;
+}
+
+body {
+  background-color: #4621AD;
+  font-size: 1rem;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+h1 {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 12.35rem;
+  height: 5.2rem;
+  background: url(/images/images/rebehayan/h1_logo.png)
+  no-repeat center / 4.75rem auto #fff;
+  transform: translateX(-50%);
+  border-radius: 0 0 1.125rem 1.125rem;
+}
+
+header {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  padding: 7.4rem;
+  width: 64.45rem;
+  transform: translateX(-50%);
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
+  padding: 0 3rem 0 0;
+  list-style: none;
+}
+
+header nav ul a {
+  position: relative;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: #c6c6d4;
+  transition: all .3s;
+}
+
+header nav ul a:hover {
+  color: #fff;
+}
+
+header nav ul a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.125rem;
+  right: 0;
+  height: .15rem;
+  background: #fff;
+  transition: all .3s;
+  transform: translateY(0.5rem);
+  opacity: 0;
+}
+
+header nav ul a:hover:after {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+header .btn_menu,
+header .search, 
+header .alarm {
+  display: none;
+}
+
+
+

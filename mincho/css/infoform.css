@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+fieldset {
+  margin: 8px;
+  border-radius: 5px;
+}
+
+legend {
+  background: rgb(217, 255, 255);
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.prevBtn {
+  position: absolute;
+  top: 22px;
+  left: 12px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}

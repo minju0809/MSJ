@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>find</title>
+  <link rel="stylesheet" href="./css/find.css">
+</head>
+
+<body>
+  <button id="prevBtn" class="prevBtn" style="cursor: pointer">이전</button>
+  <div id="header" class="header">
+    <h3>체육관 찾기</h3>
+  </div>
+  <hr>
+  <div class="gym">
+    <p>< 구로누리 체육관 ></p>
+    <div class="gymImg">
+      <div class="bigImg">
+        <button class="btn" style="cursor: pointer" onclick="plusDivs(-1)">&#10094;</button>
+        <img class="slides" src="../images/images/mincho/구로누리 전체1.jpg" alt="">
+        <img class="slides" src="../images/images/mincho/구로누리 전체2.jpg" alt="">
+        <img class="slides" src="../images/images/mincho/구로누리 샵.jpg" alt="">
+        <img class="slides" src="../images/images/mincho/구로누리 레슨.jpg" alt="">
+        <button class="btn" style="cursor: pointer" onclick="plusDivs(1)">&#10095;</button>
+      </div>
+
+      <div class="gymSmallImg">
+        <img class="smallImges" src="../images/images/mincho/구로누리 전체1.jpg" onclick="currentDiv(1)" style="cursor: pointer">
+        <img class="smallImges" src="../images/images/mincho/구로누리 전체2.jpg" onclick="currentDiv(2)" style="cursor: pointer">
+        <img class="smallImges" src="../images/images/mincho/구로누리 샵.jpg" onclick="currentDiv(3)" style="cursor: pointer">
+        <img class="smallImges" src="../images/images/mincho/구로누리 레슨.jpg" onclick="currentDiv(4)" style="cursor: pointer">
+      </div>
+      <div class="numberBtn">
+        <button class="btn demo" onclick="currentDiv(1)" style="cursor: pointer">1</button>
+        <button class="btn demo" onclick="currentDiv(2)" style="cursor: pointer">2</button>
+        <button class="btn demo" onclick="currentDiv(3)" style="cursor: pointer">3</button>
+        <button class="btn demo" onclick="currentDiv(4)" style="cursor: pointer">4</button>
+      </div>
+    </div>
+
+
+    <script src="./js/find.js"></script>
+</body>
+
+</html>

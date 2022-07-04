@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MSJ</title>
+  <link rel="stylesheet" href="./css/msj.css">
+  <script defer src="./js/msj.js"></script>
+</head>
+
+<body>
+  <div id="header" class="header">
+    <div id="headerTitle" class="headerTitle">
+      <img src="/images/images/MJS/0 header1.jpg" id="icon" class="icon"></img>
+      <div id="title" class="title">MSJ</div>
+    </div>
+    <ul id="headerMenu" class="headerMenu">
+      <!-- style="transition: all 0.5s ease 0s; color: white;" -->
+      <li><a class="menus" href="#"><img src="/images/images/MJS/화살표.png" alt="" id="arrow" class="arrow">
+          Home</a></li>
+      <li><a class="menus" onclick="location.href='./gallery.html'" href="#"><img src="/images/images/MJS/화살표.png"
+            alt="" id="arrow" class="arrow">
+          Gallery</a></li>
+      <li><a class="menus" href="#"><img src="/images/images/MJS/화살표.png" alt="" id="arrow" class="arrow">
+          List</a></li>
+      <li><a class="menus" onclick="location.href='anniversary.html'" href="#"><img src="/images/images/MJS/화살표.png"
+            alt="" id="arrow" class="arrow">
+          Anniversary</a></li>
+    </ul>
+    <div id="headerLink" class="headerLink">
+      <img style="cursor: pointer" onclick="location.href='../mincho/mincho.html'"
+        src="/images/images/MJS/logo2.jpg" id="link" class="link"></img>
+    </div>
+    <a href="#" id="toggleBtn" class="toggleBtn">
+      <img src="/images/images/MJS/btn_menu.png" alt="" id="btnImg" class="btnImg">
+    </a>
+  </div>
+  <form action="#" accept-charset="utf-8" name="datalist" method="get">
+    <fieldset style="width:350">
+      <legend>DATE</legend>
+      <br>
+      날짜 입력<br>
+      <input type="date" min="1950-01-01" name="date" step="1">
+      <br><br>
+  </form>
+    <!-- 자동 이미지 슬라이드 -->
+  <div class="imgBody">
+    <div class="body1">
+      <ul class="slidelist1">
+        <li><img class="autoSlide1" src="../images/images/MJS/10 완선Wedding1.jpg" alt=""></li>
+        <li><img class="autoSlide1" src="../images/images/MJS/11 완선Wedding2.jpg" alt=""></li>
+        <li><img class="autoSlide1" src="../images/images/MJS/12 완선Wedding3.jpg" alt=""></li>
+      </ul>
+    </div>
+    <div class="body2">
+      <ul class="slidelist2">
+        <li><img class="autoSlide2" src="../images/images/MJS/logo1.jpg" alt=""></li>
+        <li><img class="autoSlide2" src="../images/images/MJS/logo2.jpg" alt=""></li>
+        <li><img class="autoSlide2" src="../images/images/MJS/logo3.jpg" alt=""></li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+
+</html>
