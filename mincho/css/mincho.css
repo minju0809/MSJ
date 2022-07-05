@@ -89,12 +89,12 @@ body {
 
 /* 원 큰 모드 */
 /* Timer */
-/* .timer {
+.timer {
   margin: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 #time {
@@ -173,10 +173,10 @@ body {
   background: var(--clr);
   border-radius: 50%;
   box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
-} */
+}
 
 /* Timer 원 작은 mode */
-.timer {
+/* .timer {
   margin: 12px;
   display: flex;
   justify-content: center;
@@ -211,7 +211,6 @@ body {
   fill: transparent;
   stroke: #191919;
   stroke-width: 4;
-  /* transform: translate(5px, 5px); */
 }
 
 #time .circle svg circle:nth-child(2) {
@@ -221,7 +220,6 @@ body {
 
 #time div {
   position: absolute;
-  /* left: 20px; */
   text-align: center;
   font-weight: 500;
   font-size: 1.5em;
@@ -260,7 +258,7 @@ body {
   background: var(--clr);
   border-radius: 50%;
   box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
-}
+} */
 
 
 

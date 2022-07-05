@@ -1,0 +1,47 @@
+.header {
+  margin: 2px;
+  padding: 8px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  color-scheme: dark; 
+  /* ? */
+  text-decoration: green wavy underline;
+  font-style: oblique;
+}
+
+.nav_article {
+  margin: 2px;
+  display: flex;
+  border: 2px solid yellow;
+}
+
+.nav {
+  margin: 0px;
+  padding: 0px;
+  width: 200px;
+  text-decoration: none;
+  border: 2px solid red;
+  list-style-position: inside;
+  /* 마커 위치 안쪽으로 */
+}
+
+.article {
+  width: 100%;
+  border: 2px solid green;
+}
+
+h1 {
+  margin: 0;
+}
+
+ol {
+  margin: 4px;
+  padding: 4px;
+  font-weight: bold;
+}
+
+li {
+  /* list-style: none; */
+  font-weight: 400;
+}

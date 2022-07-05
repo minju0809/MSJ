@@ -137,11 +137,11 @@ setInterval(()=>{
   seconds.innerHTML = s + '<br><span>Seconds</span>';
   ampm.innerHTML = am;
 
-  hh.style.strokeDashoffset = 220 - (220 * h) / 12; 
+  hh.style.strokeDashoffset = 440 - (440 * h) / 12; 
   // 12 hrs clock
-  mm.style.strokeDashoffset = 220 - (220 * m) / 60;
+  mm.style.strokeDashoffset = 440 - (440 * m) / 60;
   // 60 munutes
-  ss.style.strokeDashoffset = 220 - (220 * s) / 60;
+  ss.style.strokeDashoffset = 440 - (440 * s) / 60;
   // 60 seconds
 
   hr_dot.style.transform = `rotate(${h * 30}deg)`;
