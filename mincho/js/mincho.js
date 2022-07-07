@@ -183,7 +183,7 @@ bodyBtn2.onclick = () => {
 const bodyBtn3 = document.querySelector("#bodyBtn3");
 
 bodyBtn3.onclick = () => {
-  window.location.href = "../responsive admin dashboard/dashboard.html"
+  window.location.href = "./dashboard.html"
 }
 
 // 공지사항 버튼 click 시 notice.html로 연결

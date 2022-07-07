@@ -2,16 +2,12 @@
 
 :root {
   /* Color */
-  /* --white-color: #fff; */
-  /* --color-primary: rgb(132, 235, 235); */
-  
   --color-btn: aliceblue;
   --color-primary: #00e5ff;
   --color-white: #fff;
   --color-black: #140a00;
   --color-info-dark: #7d8da1;
   --color-info-light: #dce1eb;
-  /* --color-dark: #363949; */
   --color-dark: rgba(65, 13, 13, 0.979);
   --color-light: rgba(132, 139, 200, 0.18);
   --color-primary-variant: #6effff;
@@ -34,7 +30,7 @@
   --font-small: 20px;
   --font-micro: 16px;
 }
-/* RGB(26,36,54)  #181a1e  */
+
 /* -------------------dark theme variables------------------- */
 .dark-theme-variables {
   --color-btn: #15171c;
