@@ -1,8 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 :root {
   /* Color */
-  --white-color: #Fff;
-  --black-color: #140a00;
-  --text-color: rgba(65, 13, 13, 0.979);
+  /* --white-color: #fff; */
+  /* --color-primary: rgb(132, 235, 235); */
+  
+  --color-btn: aliceblue;
+  --color-primary: #00e5ff;
+  --color-white: #fff;
+  --color-black: #140a00;
+  --color-info-dark: #7d8da1;
+  --color-info-light: #dce1eb;
+  /* --color-dark: #363949; */
+  --color-dark: rgba(65, 13, 13, 0.979);
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-primary-variant: #6effff;
+  --color-dark-variant: #677483;
+  --color-background: #f6f6f9;
+  
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+  
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+  
+  --color-box-shadow: rgb(173, 234, 234);
 
   /* Font Size */
   --font-large: 28px;
@@ -10,31 +34,69 @@
   --font-small: 20px;
   --font-micro: 16px;
 }
+/* RGB(26,36,54)  #181a1e  */
+/* -------------------dark theme variables------------------- */
+.dark-theme-variables {
+  --color-btn: #15171c;
+  --color-primary: #353942;
+  --color-background: #181a1e;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(0, 0, 0, 0.4);
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
 
 body {
-  background-color: rgba(244, 250, 249, 0.944);
+  background-color: var(--color-background);
   margin: 0;
   padding: 0;
 }
 
+.theme-toggler {
+  background: var(--color-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1.6rem;
+  width: 4.2rem;
+  border-radius: var(--border-radius-1);
+}
+
+.theme-toggler span {
+  font-size: 1.2rem;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-toggler span.active {
+  background: var(--color-primary);
+  color: white;
+  border-radius: var(--border-radius-1);
+}
+
 .header {
-  position: sticky !important;
+  position: sticky;
   z-index: 11;
   top: 0px;
-  background-color: rgb(132, 235, 235);
+  background-color: var(--color-background);
   padding: 5px;
-  border-bottom: 1px solid rgb(132, 235, 235);
+  border-bottom: 1px solid var(--color-primary);
   border-radius: 0 0 10px 10px;
+  box-shadow: 0.1em 0.2em 0.5em var(--color-box-shadow);
   display: flex;
   align-items: center;
   height: 70px;
 }
 
 .headerTitle {
-  margin-left: 20px;
+  margin: 0 20px;
   font-size: var(--font-large);
   font-weight: bold;
-  color: white;
+  color: var(--color-dark);
 }
 
 .headerLogo {
@@ -42,19 +104,7 @@ body {
   width: 50px;
   border-radius: 40%;
   position: relative;
-  border: 1px solid white;
-}
-
-.modeBtn {
-  width: 48px;
-  margin: 4px;
-  padding: 4px;
-  font-size: var(--font-micro);
-  background-color: aliceblue;
-  color: var(--text-color);
-  border: 1px solid rgb(173, 234, 234);
-  border-radius: 8px;
-  cursor: pointer;
+  border: 1px solid var(--color-primary);
 }
 
 .logeMenu {
@@ -68,13 +118,13 @@ body {
 
 .menus {
   text-decoration: none;
-  color: var(--white-color);
+  color: var(--color-dark);
 }
 
 .menus:hover {
   margin: 4px;
   padding: 4px;
-  box-shadow: 2px 2px 1px rgb(50, 159, 169);
+  box-shadow: 2px 2px 1px var(--color-box-shadow);
 }
 
 .body {
@@ -99,8 +149,8 @@ body {
 
 #time {
   display: flex;
-  gap: 40px;
-  color: var(--text-color);
+  gap: 10px;
+  color: var(--color-dark);
 }
 
 #time .circle {
@@ -165,7 +215,7 @@ body {
 }
 
 .dots::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -3px;
   width: 15px;
@@ -186,7 +236,7 @@ body {
 #time {
   display: flex;
   gap: 20px;
-  color: var(--text-color);
+  color: var(--color-dark);
 }
 
 #time .circle {
@@ -260,20 +310,13 @@ body {
   box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
 } */
 
-
-
-
-
-
-
-
 /* body button */
 .bodyBtn {
-  box-shadow: 0.1em 0.2em 0.5em rgb(173, 234, 234);
+  box-shadow: 0.1em 0.2em 0.5em var(--color-box-shadow);
   font-size: var(--font-medium);
   font-weight: bold;
-  background-color: aliceblue;
-  color: var(--text-color);
+  background-color: var(--color-btn);
+  color: var(--color-dark);
   margin: 10px;
   width: 200px;
   height: 200px;
@@ -282,8 +325,8 @@ body {
 }
 
 .bodyBtn:hover {
-  transition: background-color .5s;
-  background-color: rgb(132, 235, 235) !important;
+  transition: background-color 0.5s;
+  background-color: var(--color-primary);
 }
 
 .toggleBtn {
@@ -291,7 +334,7 @@ body {
   position: absolute;
   right: 16px;
   font-size: var(--font-large);
-  color: white;
+  color: var(--color-dark);
 }
 
 @media all and (min-width: 320px) and (max-width: 768px) {
@@ -303,10 +346,10 @@ body {
     display: none;
     margin: 5px 0px;
     padding: 16px;
-    border: 1px solid white;
+    border: 1px solid var(--color-primary);
     border-radius: 10px;
-    background-color: rgb(132, 235, 235);
-    box-shadow: rgb(173, 234, 234);
+    background-color: var(--color-background);
+    box-shadow: var(--color-box-shadow);
     width: 120px;
     height: 200px;
     position: absolute;
@@ -323,13 +366,13 @@ body {
   .menus {
     padding: 5px;
     text-decoration: none;
-    color: var(--white-color);
+    color: var(--color-dark);
     font-weight: 600;
     transition-duration: 0.5s;
   }
 
   .menus:hover {
-    box-shadow: 2px 2px 1px var(--text-color);
+    box-shadow: 2px 2px 1px var(--color-dark);
   }
 }
 
@@ -340,7 +383,6 @@ body {
 @media all and (min-width: 1024px) {
 
 } */
-
 
 /*  */
 
@@ -409,13 +451,13 @@ body {
 /* .menus {
   padding: 5px;
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--color-dark);
   font-weight: 600;
   transition-duration: 0.5s;
 } */
 
 /* .menus:hover {
-  box-shadow: 2px 2px 1px var(--text-color);
+  box-shadow: 2px 2px 1px var(--color-dark);
 } */
 
 /* hr {
@@ -445,7 +487,7 @@ body {
   font-size: 20px;
   font-weight: bold;
   background-color: aliceblue;
-  color: var(--text-color);
+  color: var(--color-dark);
   margin: 10px;
   width: 200px;
   height: 200px;

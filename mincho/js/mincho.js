@@ -22,75 +22,86 @@ function slideShow() {
 
 
 // 화이트모드, 다크모드 변경하기
-  // Timer 글자색 바꾸기 >> innerHTML 값이라서 찾을 수 없는건지.. span의 글자도 따로 적용해야 할 듯
-  function TimerSetColor(color) {
-    let timerFont = document.querySelectorAll('.timerFont');
-    for(let i=0; i<timerFont.length; i++) {
-      timerFont[i].style.color = color;
-    }
-  }
+const themeToggler = document.querySelector(".theme-toggler");
 
-  // 바디 글자색 바꾸기
-  // function BodySetColor(color) {
-  //   document.querySelector('body').style.color = color;
+// change theme
+themeToggler.addEventListener("click", () => {
+  document.body.classList.toggle("dark-theme-variables");
+
+  themeToggler.querySelector("span:nth-child(1)").classList.toggle("active");
+  themeToggler.querySelector("span:nth-child(2)").classList.toggle("active");
+});
+
+
+  // Timer 글자색 바꾸기 >> innerHTML 값이라서 찾을 수 없는건지.. span의 글자도 따로 적용해야 할 듯
+  // function TimerSetColor(color) {
+  //   let timerFont = document.querySelectorAll('.timerFont');
+  //   for(let i=0; i<timerFont.length; i++) {
+  //     timerFont[i].style.color = color;
+  //   }
   // }
 
-  // 바디버튼 글자색 바꾸기
-  function BodyBtnSetColor(color) {
-    let bodyBtn = document.getElementsByClassName('bodyBtn');
-    for(let i=0; i<bodyBtn.length; i++) {
-        bodyBtn[i].style.color = color;
-      }
-  }
+  // // 바디 글자색 바꾸기
+  // // function BodySetColor(color) {
+  // //   document.querySelector('body').style.color = color;
+  // // }
 
-  // 해더 배경색 바꾸기
-  function HeaderSetBackgroundColor(color) {
-    document.querySelector('.header').style.backgroundColor = color;
-  }
+  // // 바디버튼 글자색 바꾸기
+  // function BodyBtnSetColor(color) {
+  //   let bodyBtn = document.getElementsByClassName('bodyBtn');
+  //   for(let i=0; i<bodyBtn.length; i++) {
+  //       bodyBtn[i].style.color = color;
+  //     }
+  // }
 
-  // logoMenu 배경색 바꾸기
-  function LogoMenuSetBackgroundColor(color) {
-    document.querySelector('ul').style.backgroundColor = color;
-  }
+  // // 해더 배경색 바꾸기
+  // function HeaderSetBackgroundColor(color) {
+  //   document.querySelector('.header').style.backgroundColor = color;
+  // }
 
-  // 바디 배경색 바꾸기
-  function BodySetBackgroundColor(color) {
-    document.querySelector('body').style.backgroundColor = color;
-  }
+  // // logoMenu 배경색 바꾸기
+  // function LogoMenuSetBackgroundColor(color) {
+  //   document.querySelector('ul').style.backgroundColor = color;
+  // }
 
-  // 바디버튼 배경색 바꾸기
-  function BodyBtnSetBackgroundColor(color) {
-    let bodyBtn = document.getElementsByClassName('bodyBtn');
-    for(let i=0; i<bodyBtn.length; i++) {
-      bodyBtn[i].style.backgroundColor = color;
-    }
-  }
+  // // 바디 배경색 바꾸기
+  // function BodySetBackgroundColor(color) {
+  //   document.querySelector('body').style.backgroundColor = color;
+  // }
 
-  // 주간, 야간 모드
-  function day_night_handler(self) {
-    // let target = document.querySelector('body');
-    if(self.value == 'day') {
-      // 야간 모드
-      // BodySetColor('white');
-      TimerSetColor('white');
-      BodyBtnSetColor('white');
-      HeaderSetBackgroundColor('RGB(26,36,54)');
-      LogoMenuSetBackgroundColor('RGB(26,36,54)');
-      BodySetBackgroundColor('rgb(39, 58, 93)');
-      BodyBtnSetBackgroundColor('RGB(26,36,54)');
-      self.value = 'night';
-    } else {
-      // 주간 모드
-      // BodySetColor('black');
-      TimerSetColor('RGB(26,36,54)');
-      BodyBtnSetColor('rgba(65, 13, 13, 0.979)');
-      HeaderSetBackgroundColor('rgb(132, 235, 235)');
-      LogoMenuSetBackgroundColor('rgb(132, 235, 235)');
-      BodySetBackgroundColor('white');
-      BodyBtnSetBackgroundColor('aliceblue');
-      self.value = 'day';
-    }
-  }
+  // // 바디버튼 배경색 바꾸기
+  // function BodyBtnSetBackgroundColor(color) {
+  //   let bodyBtn = document.getElementsByClassName('bodyBtn');
+  //   for(let i=0; i<bodyBtn.length; i++) {
+  //     bodyBtn[i].style.backgroundColor = color;
+  //   }
+  // }
+
+  // // 주간, 야간 모드
+  // function day_night_handler(self) {
+  //   // let target = document.querySelector('body');
+  //   if(self.value == 'day') {
+  //     // 야간 모드
+  //     // BodySetColor('white');
+  //     TimerSetColor('white');
+  //     BodyBtnSetColor('white');
+  //     HeaderSetBackgroundColor('RGB(26,36,54)');
+  //     LogoMenuSetBackgroundColor('RGB(26,36,54)');
+  //     BodySetBackgroundColor('rgb(39, 58, 93)');
+  //     BodyBtnSetBackgroundColor('modeBtn');
+  //     self.value = 'night';
+  //   } else {
+  //     // 주간 모드
+  //     // BodySetColor('black');
+  //     TimerSetColor('RGB(26,36,54)');
+  //     BodyBtnSetColor('rgba(65, 13, 13, 0.979)');
+  //     HeaderSetBackgroundColor('rgb(132, 235, 235)');
+  //     LogoMenuSetBackgroundColor('rgb(132, 235, 235)');
+  //     BodySetBackgroundColor('white');
+  //     BodyBtnSetBackgroundColor('aliceblue');
+  //     self.value = 'day';
+  //   }
+  // }
   
 
 // 화면 작을 때, logoMenu 보이게 하기  
@@ -166,6 +177,13 @@ const bodyBtn2 = document.querySelector("#bodyBtn2");
 
 bodyBtn2.onclick = () => {
   window.location.href = "CSSpractice.html"
+}
+
+// Dash Board 버튼 click 시 dashboard.html로 연결
+const bodyBtn3 = document.querySelector("#bodyBtn3");
+
+bodyBtn3.onclick = () => {
+  window.location.href = "../responsive admin dashboard/dashboard.html"
 }
 
 // 공지사항 버튼 click 시 notice.html로 연결

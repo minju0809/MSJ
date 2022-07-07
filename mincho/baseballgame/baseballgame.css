@@ -2,28 +2,30 @@
   /* Color */
   --white-color: #Fff;
   --black-color: #140a00;
-  --blue-color: #045fd4;
-  --red-color: #ff0000;
-  --grey-dark-color: #909090;
-  --grey-light-color: #e0e0e0;
-  --point-color: #48acb8;
+  --text-color: rgba(65, 13, 13, 0.979);
+  --body-color: rgba(244, 250, 249, 0.944);
+  --btn-color: aliceblue;
+  --point-color: rgb(132, 235, 235);
+  --box-shadow-color: rgb(173, 234, 234);
 
   /* Font Size */
-  --font-large: 30px;
-  --font-medium: 20px;
-  --font-small: 15px;
-  --font-micro: 10px;
+  --font-large: 28px;
+  --font-medium: 24px;
+  --font-small: 20px;
+  --font-micro: 16px;
 }
 
 body {
+  background-color: var(--body-color);
+  margin: 0;
+  padding: 0;
   text-align: center;
-  background-color: #80deea;
 }
 
 .prevBtn {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 20px;
+  left: 20px;
 }
 
 hr {
@@ -38,9 +40,8 @@ div {
   display: none;
   font-size: var(--font-large);
   font-style: italic;
-  background-color: aqua;
+  background-color: var(--point-color);
   border-radius: 10px;
-  /* border: 2px solid red; */
 }
 
 #answer {
@@ -56,7 +57,8 @@ button {
   width: 50px;
   height: 30px;
   border-radius: 5px;
-  background-color: var(--point-color);
+  background-color: var(--btn-color);
+  border: 1px solid var(--point-color);
 }
 
 #result {
