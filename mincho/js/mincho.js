@@ -106,7 +106,7 @@ themeToggler.addEventListener("click", () => {
 
 // 화면 작을 때, logoMenu 보이게 하기  
 const toggleBtn = document.querySelector('.toggleBtn');
-const menu = document.querySelector('.logeMenu');
+const menu = document.querySelector('.logoMenu');
 
 toggleBtn.addEventListener('click', () => {
   menu.classList.toggle('active');
