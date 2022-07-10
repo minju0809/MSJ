@@ -19,21 +19,29 @@ hr {
   display: none;
 }
 
-.add {
+ul {
+  padding: 0;
+}
+
+li {
   position: relative;
-  cursor: pointer;
-  margin: 10px;
-  padding: 5px;
+  list-style: none;
+  margin: 12px;
+  padding: 12px;
   border: 1px solid black;
   border-radius: 5px;
 }
 
-.changeNoticeBtn {
+.close {
+  cursor: pointer;
+  border: 2px solid transparent;
   position: absolute;
-  right: 52px;
+  right: 8px;
+  transition: 0.5s;
 }
 
-.deleteNoticeBtn {
-  position: absolute;
-  right: 4px;
+.close:hover {
+  background-color: rgb(195, 242, 244);
+  border: 2px solid rgb(195, 242, 244);
+  border-radius: 4px;
 }
