@@ -19,11 +19,7 @@ hr {
   display: none;
 }
 
-ul {
-  padding: 0;
-}
-
-li {
+p {
   position: relative;
   list-style: none;
   margin: 12px;
