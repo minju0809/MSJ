@@ -6,13 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Notice</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/notice.css">
+  <script src="https://kit.fontawesome.com/9b284208b6.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <div id="header" class="header">
     <button id="prevBtn" class="prevBtn" style="cursor: pointer">이전</button>
     <h3>공지사항</h3>
+    <div class="theme-toggler" style="cursor: pointer">
+      <span class="material-icons-sharp active">light_mode</span>
+      <span class="material-icons-sharp">dark_mode</span>
+    </div>
     <button id="addBtn" class="addBtn" style="cursor: pointer">추가</button>
   </div>
   <hr>
@@ -27,6 +35,7 @@
   <div id="addNotice" class="addNotice"></div>
 
 
+  <script src="./js/base.js"></script>
   <script src="./js/notice.js"></script>
 </body>
 
