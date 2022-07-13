@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Color */
+  --color-btn: aliceblue;
+  --color-primary: #00e5ff;
+  --color-white: #fff;
+  --color-black: #140a00;
+  --color-info-dark: #7d8da1;
+  --color-info-light: #dce1eb;
+  --color-dark: rgba(65, 13, 13, 0.979);
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-primary-variant: #6effff;
+  --color-dark-variant: #677483;
+  --color-background: #f6f6f9;
+  
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+  
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+  
+  --color-box-shadow: rgb(173, 234, 234);
+
+  /* Font Size */
+  --font-large: 28px;
+  --font-medium: 24px;
+  --font-small: 20px;
+  --font-micro: 16px;
+}
+
+/* -------------------dark theme variables------------------- */
+.dark-theme-variables {
+  --color-btn: #15171c;
+  --color-primary: #353942;
+  --color-background: #181a1e;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(0, 0, 0, 0.4);
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+body {
+  background-color: var(--color-background);
+  margin: 0;
+  padding: 0;
+}
+
+.theme-toggler {
+  background: var(--color-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1.6rem;
+  width: 4.2rem;
+  border-radius: var(--border-radius-1);
+}
+
+.theme-toggler span {
+  font-size: 1.2rem;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-toggler span.active {
+  background: var(--color-primary);
+  color: white;
+  border-radius: var(--border-radius-1);
+}
+
+
+.header {
+
+  margin: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerTitle {
+  color: var(--color-dark);
+}

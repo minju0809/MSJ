@@ -82,7 +82,7 @@ setInterval(()=>{
 const bodyBtn1 = document.querySelector("#bodyBtn1");
 
 bodyBtn1.onclick = () => {
-  window.location.href = "find.html"
+  window.location.href = "findgym.html"
 }
 
 // CSS 연습 버튼 click 시 score.html로 연결
