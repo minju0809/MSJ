@@ -29,17 +29,22 @@ let result = document.querySelector(".result");
 // console.log(filterGym("김포"));
 
 searchBtn.addEventListener("click", function () {
-  const filterGym = gymList.filter((gym) => gym.includes(findGym.value));
-  let list = document.createElement("li");
   if (!findGym.value) {
     alert("찾으려는 지역을 입력해 주세요!");
-    findGym.focus();
-  } else if (findGym.value == '서울' || '김포') { 
-    list.innerText = filterGym;
+  } else {
+    const filterGym = gymList.filter((gym) => gym.includes(findGym.value));
+    let list = document.createElement("li");
+
+    if (filterGym.length) {
+      list.innerText = filterGym;
+    } else {
+      list.innerText = alert("입력하신 지역에 등록 체육관이 없습니다.");
+      findGym.value = "";
+      findGym.focus();
+      return;
+    }
     result.appendChild(list);
     findGym.value = "";
-    findGym.focus();
-  } else if (findGym.value !== filterGym) {
-  alert('해당 지역에는 등록 체육관이 없습니다');
   }
+  findGym.focus();
 });
