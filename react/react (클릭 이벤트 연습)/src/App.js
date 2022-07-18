@@ -2,78 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 
-function Header(props) { // 컴포넌트 = 사용자 정의 태그
-  console.log('props', props, props.title);
-  return <header>
-    <h1><a href='/' onClick={(event) => {
-      event.preventDefault();
-      props.onChangeMode();
-    }}>{props.title}</a></h1>
-  </header>
-}
-
-function Nav(props) {
-  const lis = []
-  for (let i = 0; i < props.topics.length; i++) {
-    let t = props.topics[i];
-    lis.push(<li key={t.id}>
-      <a id={t.id} href={"/read/" + t.id} onClick={event => {
-        event.preventDefault();
-        props.onChangeMode(Number(event.target.id));
-      }}>{t.title}</a>
-    </li>)
-  }
-  return <nav>
-    <ol>
-      {lis}
-    </ol>
-  </nav>
-}
-
-function Article(props) {
-  return <article>
-    <h2>{props.title}</h2>
-    {props.body}
-  </article>
-}
-
-function Create(props) {
-  return <article>
-    <h2>Create</h2>
-    <form onSubmit={event => {
-      event.preventDefault();
-      const title = event.target.title.value;
-      const body = event.target.body.value;
-      props.onCreate(title, body);
-    }}>
-      <p><input type='text' name='title' placeholder='title'></input></p>
-      <p><textarea name='body' placeholder='body'></textarea></p>
-      <p><input type='submit' value='Create'></input></p>
-    </form>
-  </article>
-}
-
-function Update(props) {
-  const [title, setTitle] = useState(props.title);
-  const [body, setBody] = useState(props.body);
-  return <article>
-    <h2>Update</h2>
-    <form onSubmit={event => {
-      event.preventDefault();
-      const title = event.target.title.value;
-      const body = event.target.body.value;
-      props.onUpdate(title, body);
-    }}>
-      <p><input type='text' name='title' placeholder='title' value={title} onChange={event => {
-        setTitle(event.target.value);
-      }}></input></p>
-      <p><textarea name='body' placeholder='body' value={body} onChange={event => {
-        setBody(event.target.value);
-      }}></textarea></p>
-      <p><input type='submit' value='Update'></input></p>
-    </form>
-  </article>
-}
+import Update from "./component/Update";
+import Header from "./component/Header";
+import Nav from "./component/Nav";
+import Article from "./component/Article";
+import Create from "./component/Create";
+console.log("header", Header);
 
 function App() {
   const [mode, setMode] = useState('WELCOME');
@@ -148,11 +82,11 @@ function App() {
     <div className="App">
       <Header title="WEB" onChangeMode={() => {
         setMode('WELCOME');
-      }}></Header>
+      }}/>
       <Nav topics={topics} onChangeMode={(_id) => {
         setMode('READ');
         setId(_id);
-      }}></Nav>
+      }}/>
       {content}
       <ul>
         <li><a href='/create' onClick={event => {

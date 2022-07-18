@@ -1,11 +1,6 @@
-// import logo from './logo.svg';
-// import './App.css';
 import React, { Component } from 'react';
-// import MyComponent from './MyComponent';
-// import EventPractice from './EventPractice';
 // import ValidationSample from './ValidationSample';
 // import ScrollBox from './ScrollBox';
-// import IterationSample from './IterationSample';
 import LifeCycleSample from './LifeCycleSample';
 
 // 랜덤 색상 생성
@@ -26,15 +21,12 @@ class App extends Component {
 
   render() {
     return (
-      // <MyComponent name='React' age={4}/>
-      // <EventPractice/>
       // <div>
       //   <ScrollBox ref={(ref) => this.scrollBox=ref}/>
       //   <button onClick={() => this.scrollBox.scrollToBottom()}>
       //     맨 밑으로
       //   </button>
       // </div>
-      // <IterationSample/>
       <div>
         <button onClick={this.handleClick}>랜덤 색상</button>
         <LifeCycleSample color={this.state.color}/>

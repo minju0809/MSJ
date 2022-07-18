@@ -48,3 +48,17 @@ searchBtn.addEventListener("click", function () {
   }
   findGym.focus();
 });
+
+// 주소검색
+const btnFindAddress = document.querySelector(".find_address");
+btnFindAddress.addEventListener("click", () => {
+  new daum.Postcode({
+    oncomplete: function (data) {
+      let result = document.querySelector(".result");
+      result.innerText = data.autoJibunAddress !== "" ? data.autoJibunAddress : data.jibunAddress;
+      console.log("found data", data);
+      // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분입니다.
+      // 예제를 참고하여 다양한 활용법을 확인해 보세요.
+    },
+  }).open();
+});
