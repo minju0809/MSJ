@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import Header from './Header';
-import Article from './Article';
-import Nav from './Nav';
+import BadmintonBoardHeader from './BadmintonBoardHeader';
+import BadmintonBoardArticle from './BadmintonBoardArticle';
+import BadmintonBoardNav from './BadmintonBoardNav';
 
 function BadmintonBoard() {
   const [mode, setMode] = useState('대회설정');
@@ -25,7 +25,7 @@ function BadmintonBoard() {
   ]);
   let content = null;
   if (mode === '대회설정') {
-    content = <Article title='대회설정' body='대회'></Article>
+    content = <BadmintonBoardArticle title='대회설정' body='대회'></BadmintonBoardArticle>
   } else {
     let title, body = null;
     for(let i=0; i<topics.length; i++) {
@@ -34,20 +34,20 @@ function BadmintonBoard() {
         body = topics[i].body;
       }
     }
-    content = <Article title={title} body={body}></Article>
+    content = <BadmintonBoardArticle title={title} body={body}></BadmintonBoardArticle>
   }
 
   return (
     <div>
-      <Header title="Mincho"></Header>
+      <BadmintonBoardHeader title="Mincho"></BadmintonBoardHeader>
       <div className='nav_article'>
-        <Nav 
+        <BadmintonBoardNav 
         topics={topics} onChangeMode={(_id) => {
           setMode();
           setId(_id);
           console.log('ㅜㅜ', _id);
         }}
-        ></Nav>
+        ></BadmintonBoardNav>
         {content}
       </div>
     </div>

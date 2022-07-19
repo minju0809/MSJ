@@ -13,6 +13,7 @@ export default function TodoList() {
       <div>
         <button onClick={onClick}>할 일 추가</button>
         {todos}
+        <hr></hr>
       </div>
     );
   }

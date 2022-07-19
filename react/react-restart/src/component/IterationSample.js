@@ -59,6 +59,7 @@ class IterationSample extends Component {
         <ul>
           {nameList}
         </ul>
+        <hr></hr>
       </div>
     );
   }

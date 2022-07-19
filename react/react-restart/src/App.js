@@ -1,29 +1,33 @@
 import "./App.css";
 import "./css/BadmintonBoard.css";
-import TodoList from './component/TodoList';
+import Basic from './component/Basic';
 import NumberCalc from "./component/NumberCalc";
-import Button from "./component/Button1";
+import TodoList from "./component/TodoList";
+import Hooks from "./component/Hooks";
 import Box from "./component/Box1";
-import BadmintonBoard from './component/BadmintonBoard';
-import MyComponent from './component/MyComponent';
-import EventPractice from './component/EventPractice';
+import MyComponent from "./component/MyComponent";
+import EventPractice from "./component/EventPractice";
 import IterationSample from "./component/IterationSample";
-import ScrollBox from "./component/ScrollBox";
+import Hello from './component/Hello';
+import BadmintonBoard from "./component/BadmintonBoard";
+import ScrollBoxExecution from "./component/ScrollBoxExecution";
 // import ValidationSample from "./component/ValidationSample";
 // import './css/ValidationSample.css';
 
 function App() {
   return (
     <div className="App">
+      <Basic />
       <NumberCalc />
       <TodoList />
-      <Button size='big' />
-      <Button size='small' />
-      <Box size='big' />
-      <Box size='small' />
-      <MyComponent name='React' age={4}/>
-      <EventPractice/> {/* keypress 있음 */}
+      <Box size="big" />
+      <Box size="small" />
       <IterationSample />
+      <Hooks />
+      <MyComponent name="React" age={4} />
+      <EventPractice /> {/* keypress 있음 */}
+      <Hello />
+      <ScrollBoxExecution />
       <BadmintonBoard />
     </div>
   );

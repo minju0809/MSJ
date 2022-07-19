@@ -21,6 +21,7 @@ function NumberCalc() {
       <button onClick={() => handleNumber(2)}>숫자 변경</button>
       <div onClick={() => addNumber(3, 4)}>더하기</div>
       <div onClick={() => subNumber(2)}>빼기</div>
+      <hr></hr>
     </div>
   );
 }

@@ -27,6 +27,7 @@ class MyComponent extends Component {
             number: this.state.number + 1
           })
         }}>더하기</button>
+        <hr></hr>
       </div>
     );
   }

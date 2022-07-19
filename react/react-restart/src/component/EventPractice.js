@@ -48,6 +48,7 @@ class EventPractice extends Component {
           onKeyPress={this.handleKeyPress}
         />
         <button onClick={this.handleClick}>확인</button>
+        <hr></hr>
       </div>
     );
   }
