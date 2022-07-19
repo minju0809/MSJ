@@ -68,7 +68,7 @@ class LifeCycleSample extends Component {
         </h1>
         <p>color: {this.state.color}</p>
         <button onClick={this.handleClick}>
-          더하기
+          +더하기+
         </button>
       </div>
     );

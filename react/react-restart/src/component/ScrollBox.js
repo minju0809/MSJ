@@ -24,11 +24,18 @@ class ScrollBox extends Component {
     };
 
     return (
-      <div
-        style={style} ref={(ref) => {
-          this.box = ref;
-        }}>
-        <div style={innerStyle} />
+      <div>
+        <div
+          style={style}
+          ref={(ref) => {
+            this.box = ref;
+          }}
+        >
+          <div style={innerStyle} />
+        </div>
+        <div>
+          <button onClick={() => this.scrollToBottom()}>맨 밑으로</button>
+        </div>
       </div>
     );
   }

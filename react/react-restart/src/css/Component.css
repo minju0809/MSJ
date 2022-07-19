@@ -1,0 +1,8 @@
+button {
+  margin: 4px;
+}
+
+.Component {
+  display: flex;
+  justify-content: space-around;
+}
