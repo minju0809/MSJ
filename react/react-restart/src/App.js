@@ -1,6 +1,7 @@
 import "./App.css";
 import "./css/BadmintonBoard.css";
 import "./css/Component.css";
+import Counter from './component/Counter';
 import Basic from "./component/Basic";
 import Hooks from "./component/Hooks";
 // import Box from "./component/Box1";
@@ -13,6 +14,7 @@ import ScrollBox from "./component/ScrollBox";
 function App() {
   return (
     <div className="App">
+      <Counter />
       <Basic />
       {/* <Box size="big" /> */}
       {/* <Box size="small" /> */}

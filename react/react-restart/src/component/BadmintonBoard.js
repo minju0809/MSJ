@@ -45,7 +45,6 @@ function BadmintonBoard() {
         topics={topics} onChangeMode={(_id) => {
           setMode();
           setId(_id);
-          console.log('ㅜㅜ', _id);
         }}
         ></BadmintonBoardNav>
         {content}
