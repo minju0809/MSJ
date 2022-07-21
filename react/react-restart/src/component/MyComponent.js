@@ -23,8 +23,8 @@ class MyComponent extends Component {
     username: "",
     message: "",
 
-    arrays: ['눈사람', '얼음', '눈', '바람'],
-    array: ''
+    arrays: ["눈사람", "얼음", "눈", "바람"],
+    array: "",
   };
 
   handleClick = () => {
@@ -53,20 +53,21 @@ class MyComponent extends Component {
     }
   };
 
+  
   handleArrayChange = (e) => {
     this.setState({
-      array: e.target.value
+      array: e.target.value,
     });
-  }
+  };
 
   handleArrayInsert = () => {
     //arrays 배열에 값을 추가하고, array 값을 초기화
     this.setState({
       arrays: this.state.arrays.concat(this.state.array),
-      array: ''
+      array: "",
     });
     // this.input.focus();
-  }
+  };
 
   handleArrayRemove = (index) => {
     // 편의상 array의 래퍼런스를 미리 만든다.
@@ -76,25 +77,23 @@ class MyComponent extends Component {
     // index번째 값을 제외한 값들을 배열에 넣어 준다.
     this.setState({
       // filter로 index번째를 제외한 원소만 있는 새 배열 생성
-      arrays: arrays.filter((item, i) => i !== index)
-      
+      arrays: arrays.filter((item, i) => i !== index),
+
       // arrays: [
-      //   ...arrays.slice(0, index), 
+      //   ...arrays.slice(0, index),
       //   // 0부터 주어진 index 전까지 원소들을 가진 새 배열 만듦
-      //   ...arrays.slice(index + 1, arrays.length) 
+      //   ...arrays.slice(index + 1, arrays.length)
       //   // index + 1부터 마지막까지 원소들을 가진 새 배열을 만든 후, 전개연산자를 사용하여 배열 하나로 합침
       // ]
     });
-  }
+  };
 
   render() {
-    const arrayList = this.state.arrays.map(
-      (array, index) => (<li
-        key={index}
-        onDoubleClick={() => this.handleArrayRemove(index)}>
+    const arrayList = this.state.arrays.map((array, index) => (
+      <li key={index} onDoubleClick={() => this.handleArrayRemove(index)}>
         {array}
-      </li>)
-    );
+      </li>
+    ));
 
     return (
       <div>
@@ -102,15 +101,8 @@ class MyComponent extends Component {
         <p>Hello, my name is {this.props.name}.</p>
         <p>My age is {this.props.age} years old.</p>
         <p>Number: {this.state.number}</p>
-        <button
-          onClick={() => {
-            this.setState({
-              number: this.state.number + 1,
-            });
-          }}
-        >
-          더하기
-        </button>
+        <button onClick={() => {this.setState({
+              number: this.state.number + 1});}}>더하기</button>
         <hr></hr>
         <button onClick={this.handleClick}>랜덤 색상</button>
         <LifeCycleSample color={this.state.color} />
@@ -120,13 +112,9 @@ class MyComponent extends Component {
         <input type="text" name="message" placeholder="아무거나 입력해보세요" value={this.state.message} onChange={this.handleChange} onKeyPress={this.handleKeyPress} />
         <button onClick={this.handleCheckClick}>확인</button>
         <hr></hr>
-        <input
-          onChange={this.handleArrayChange}
-          value={this.state.array} />
+        <input onChange={this.handleArrayChange} value={this.state.array} />
         <button onClick={this.handleArrayInsert}>추가</button>
-        <ul>
-          {arrayList}
-        </ul>
+        <ul>{arrayList}</ul>
         <hr></hr>
       </div>
     );

@@ -63,6 +63,19 @@ function Hooks() {
     });
   };
 
+  //////////////////////////////////////////////////
+  const [color, setColor] = useState('red');
+  function onMouseEnter() {
+    setColor('blue');
+  }
+  function onMouseDown() {
+    setColor('yellow');
+    console.log(color);
+  }
+  function onDblClick() {
+    setColor('red');
+  }
+  
   return (
     <div className="Hooks">
       <h1>함수형 컴포넌트</h1>
@@ -99,6 +112,8 @@ function Hooks() {
       <hr></hr>
       <button onClick={onClick}>할 일 추가</button>
       {todos}
+      <hr></hr>
+      <button style={{backgroundColor: color}} onMouseEnter={onMouseEnter} onMouseDown={onMouseDown} onDoubleClick={onDblClick}>좋아요</button>
       <hr></hr>
     </div>
   );
