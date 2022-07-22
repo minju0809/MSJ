@@ -56,11 +56,14 @@ function Hooks() {
   const [todos, setTodos] = useState([]);
 
   const onClick = () => {
-    import("./Todo.js").then(({ Todo }) => {
-      const position = todos.length + 1;
-      const newTodo = <Todo key={position} title={`할 일 ${position}`} />;
-      setTodos([...todos, newTodo]);
-    });
+    // import("./Todo.js").then(({ Todo }) => {
+    //   const position = todos.length + 1;
+    //   const newTodo = <Todo key={position} title={`할 일 ${position}`} />;
+    //   setTodos([...todos, newTodo]);
+    // });
+    const position = todos.length + 1;
+    const newTodo = <div>{`할 일 ${position}`}</div>;
+    setTodos([...todos, newTodo]);
   };
 
   //////////////////////////////////////////////////
@@ -111,7 +114,7 @@ function Hooks() {
       </div>
       <hr></hr>
       <button onClick={onClick}>할 일 추가</button>
-      {todos}
+      {todos.map((el, index) => <div key={index}>{el}</div>)}
       <hr></hr>
       <button style={{backgroundColor: color}} onMouseEnter={onMouseEnter} onMouseDown={onMouseDown} onDoubleClick={onDblClick}>좋아요</button>
       <hr></hr>

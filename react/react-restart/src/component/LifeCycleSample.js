@@ -10,7 +10,6 @@ class LifeCycleSample extends Component {
   
   constructor(props) {
     super(props);
-    console.log('construtcor');
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
